@@ -1,0 +1,10 @@
+body {
+  font-size: 100%;
+  line-height: 150%
+}
+li {
+  display: inline-block;
+}
+p {
+  font-size: 1em;
+}
