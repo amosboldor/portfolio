@@ -8,6 +8,9 @@ nav ul li {
   padding: .5em .2em;
   border-top: 1px solid black;
 }
+nav ul li:hover {
+  background-color: #0073e5;
+}
 nav ul {
   display: none;
   padding: 0;
@@ -15,7 +18,7 @@ nav ul {
   text-align: center;
 }
 nav:hover ul {
-  display: inline-block;
+  display: block;
 }
 .icon-menu {
   font-size: 2em;
@@ -29,8 +32,9 @@ nav:hover ul {
     display: table;
     margin: 0 auto;
   }
-  nav li {
+  nav ul li {
     display: inline-block;
-    border: 0px;
+    padding: .5em .2em;
+    border-top: none;
   }
 }

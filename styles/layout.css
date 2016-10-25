@@ -2,7 +2,11 @@ header, footer, main {
   max-width: 960px;
   min-width: 300px;
   margin: 0 auto;
-  border: 2px solid black;
+  background-color: #7ddc1f;
+}
+main {
+  height: 500px;
+  display: table;
 }
 .contact {
   width: 50%;
@@ -12,9 +16,16 @@ header, footer, main {
 address {
   width: 80%;
   margin: auto;
-  border: 1px solid black;
 }
-img {
+ul {
+  padding: 0;
+}
+.box {
+  display: inline-block;
+  margin: 7px;
+  width: 300px;
+}
+#me {
   margin: 1em;
   float: left;
 }
