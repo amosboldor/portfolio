@@ -10,6 +10,8 @@ nav ul li {
 }
 nav ul li:hover {
   background-color: #0073e5;
+  transition-property: background-color;
+  transition-duration: 1s;
 }
 nav ul {
   display: none;
@@ -32,6 +34,12 @@ nav:hover ul {
     display: table;
     margin: 0 auto;
   }
+
+  nav:hover ul {
+    display: table;
+    margin: 0 auto;
+  }
+
   nav ul li {
     display: inline-block;
     padding: .5em .2em;
