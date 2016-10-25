@@ -5,6 +5,7 @@ header, footer, main {
   background-color: #7ddc1f;
 }
 main {
+  border-top: 1px solid black;
   height: 500px;
   display: table;
 }
