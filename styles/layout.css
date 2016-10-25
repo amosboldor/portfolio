@@ -14,3 +14,7 @@ address {
   margin: auto;
   border: 1px solid black;
 }
+img {
+  margin: 1em;
+  float: left;
+}

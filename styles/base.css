@@ -8,3 +8,9 @@ li {
 p {
   font-size: 1em;
 }
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
