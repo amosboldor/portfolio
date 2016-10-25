@@ -1,13 +1,19 @@
 body {
   font-size: 100%;
-  line-height: 150%
+  line-height: 150%;
+  background-color: #444444;
 }
 p {
   font-size: 1em;
+  margin: 0;
 }
 a {
   text-decoration: none;
 }
 a:visited {
   color: black;
+}
+h1, h2 {
+  margin-top: 0;
+  padding-top: .4em;
 }

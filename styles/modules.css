@@ -8,14 +8,20 @@ nav ul li {
   padding: .5em .2em;
   border-top: 1px solid black;
 }
+nav ul li:hover {
+  background-color: #0073e5;
+  transition-property: background-color;
+  transition-duration: 1s;
+}
 nav ul {
   display: none;
   padding: 0;
+  margin: 0;
   width: 100%;
   text-align: center;
 }
 nav:hover ul {
-  display: inline-block;
+  display: block;
 }
 .icon-menu {
   font-size: 2em;
@@ -29,8 +35,15 @@ nav:hover ul {
     display: table;
     margin: 0 auto;
   }
-  nav li {
+
+  nav:hover ul {
+    display: table;
+    margin: 0 auto;
+  }
+
+  nav ul li {
     display: inline-block;
-    border: 0px;
+    padding: .5em .2em;
+    border-top: none;
   }
 }
