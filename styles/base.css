@@ -1,0 +1,13 @@
+body {
+  font-size: 100%;
+  line-height: 150%
+}
+p {
+  font-size: 1em;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}

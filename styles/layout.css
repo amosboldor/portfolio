@@ -1,0 +1,20 @@
+header, footer, main {
+  max-width: 960px;
+  min-width: 300px;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+.contact {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+address {
+  width: 80%;
+  margin: auto;
+  border: 1px solid black;
+}
+img {
+  margin: 1em;
+  float: left;
+}
