@@ -16,7 +16,6 @@ Project.prototype.toHtml = function() {
   $newProject.find('#poroject-githubUrl').attr('href', this.githubUrl);
   $newProject.find('#project-description').text(this.description);
   $newProject.removeClass('template');
-  console.log('sup');
   return $newProject;
 };
 

@@ -3,6 +3,9 @@ section {
   margin: auto;
   text-align: center;
 }
+.template {
+  display: none;
+}
 nav ul li {
   font-size: 1.5em;
   padding: .5em .2em;
@@ -45,5 +48,14 @@ nav:hover ul {
     display: inline-block;
     padding: .5em .2em;
     border-top: none;
+  }
+  #projects {
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #projects>div {
+    max-width: 300px;
+    margin: auto;
   }
 }
