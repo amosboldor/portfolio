@@ -6,8 +6,7 @@ header, footer, main {
 }
 main {
   border-top: 1px solid black;
-  height: 500px;
-  display: table;
+  max-width: 960px;
 }
 .contact {
   width: 50%;
