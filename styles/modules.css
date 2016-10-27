@@ -3,6 +3,10 @@ section {
   margin: auto;
   text-align: center;
 }
+#aboutme {
+  max-width: 960px;
+  margin: 0;
+}
 .template {
   display: none;
 }
