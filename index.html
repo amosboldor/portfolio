@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Amos</title>
-    <link rel="shortcut icon" href="/pics/penfold_s_pet.ico" type="image/x-icon"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="vendor/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/modules.css">
-    <script src="https://use.fontawesome.com/7987ffcc0d.js"></script>
-  </head>
-  <body>
-    <header>
-      <section>
-        <h1>Tag line</h1>
-        <h2>stuff</h2>
-      </section>
-      <nav>
-        <div class="icon-menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
-        <ul>
-          <li><i class="fa fa-linkedin-square" aria-hidden="true"><a href="https://www.linkedin.com/in/amos-boldor-33a99b66" target="_blank">Linkedin</a></i></li>
-          <li><i class="fa fa-twitter-square" aria-hidden="true"><a href="https://twitter.com/AmosBoldor" target="_blank">Twitter</a></i></li>
-          <li><i class="fa fa-github-square" aria-hidden="true"><a href="https://github.com/amosboldor" target="_blank">Github</a></i></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="projects">
-        <div class="template">
-          <a id="poroject-githubUrl" href="#" target="_blank"><img id="project-snapShotUrl" src=""/></a>
-          <h2 id="project-name"></h2>
-          <div id="project-timeTook"></div>
-          <p id="project-description"></p>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="contact">
-        <h2>Contact Me:</h2>
-        <address>
-          Phone: 206-552-4218
-          <br>
-          Email: <a href="mailto:amosboldor@gmail.com">amosboldor@gmail.com</a>
-        </address>
-      </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="scripts/myProjects.js"></script>
-    <script src="scripts/project.js"></script>
-  </body>
+   <head>
+      <meta charset="utf-8">
+      <title>Amos</title>
+      <link rel="shortcut icon" href="/pics/penfold_s_pet.ico" type="image/x-icon"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="vendor/normalize.css">
+      <link rel="stylesheet" href="styles/base.css">
+      <link rel="stylesheet" href="styles/layout.css">
+      <link rel="stylesheet" href="styles/modules.css">
+      <script src="https://use.fontawesome.com/7987ffcc0d.js"></script>
+   </head>
+   <body>
+      <header>
+         <section>
+            <h1>Tag line</h1>
+            <h2>stuff</h2>
+         </section>
+         <nav class="main-nav">
+            <div class="icon-menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <ul>
+               <li class="tab" data-content="projects" ><i class="fa fa-home" aria-hidden="true"></i><a href="#">Home</a></li>
+               <li class="tab" data-content="aboutme" ><i class="fa fa-user-circle-o" aria-hidden="true"><a href="#">About Me</a></i></li>
+               <li><i class="fa fa-linkedin-square" aria-hidden="true"><a href="https://www.linkedin.com/in/amos-boldor-33a99b66" target="_blank">Linkedin</a></i></li>
+               <li><i class="fa fa-twitter-square" aria-hidden="true"><a href="https://twitter.com/AmosBoldor" target="_blank">Twitter</a></i></li>
+               <li><i class="fa fa-github-square" aria-hidden="true"><a href="https://github.com/amosboldor" target="_blank">Github</a></i></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <section id="projects" class="tab-content">
+            <div class="template">
+               <a id="poroject-githubUrl" href="#" target="_blank"><img id="project-snapShotUrl" src=""/></a>
+               <h2 id="project-name"></h2>
+               <div id="project-timeTook"></div>
+               <p id="project-description"></p>
+            </div>
+         </section>
+         <section id="aboutme" class="tab-content">
+            <h2>Lorem Ipsum</h2>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+         </section>
+      </main>
+      <footer>
+         <div class="contact">
+            <h2>Contact Me:</h2>
+            <address>
+               Phone: 206-552-4218
+               <br>
+               Email: <a href="mailto:amosboldor@gmail.com">amosboldor@gmail.com</a>
+            </address>
+         </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+      <script src="scripts/myProjects.js"></script>
+      <script src="scripts/project.js"></script>
+      <script src="scripts/projectView.js"></script>
+   </body>
 </html>
