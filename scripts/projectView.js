@@ -7,4 +7,11 @@ projectView.handleMainNav = function () {
   });
 };
 
-projectView.handleMainNav();
+projectView.renderIndexPage = function() {
+  Project.projects.forEach(function(a){
+    $('#projects').append(a.toHtml());
+  });
+  projectView.handleMainNav();
+};
+
+Project.fetchAll();
