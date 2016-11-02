@@ -12,6 +12,7 @@ projectView.renderIndexPage = function() {
     $('#projects').append(a.toHtml());
   });
   projectView.handleMainNav();
+  $('footer').html('<p>' + 'Number of words in every description: ' + Project.numWordsAll() + '</p>');
 };
 
 Project.fetchAll();
