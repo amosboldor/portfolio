@@ -24,18 +24,40 @@
     $('#projects').append(proj.toHtml());
   });
 
-  Project.fetchAll = function() {
-    if (localStorage.projectArticles) {
-      var parsedData = JSON.parse(localStorage.projectArticles);
-      Project.loadAll(parsedData);
-      projectView.renderIndexPage();
-    } else {
-      $.getJSON('/../data/myProjects.json', function ( data ) {
+  Project.ajaxGetJSON = function () {
+    $.ajax({
+      url: '/../data/myProjects.json',
+      method: 'GET',
+      success: function (data, textStatus, jqXHR) {
         Project.loadAll(data);
         var stringifyedData = JSON.stringify(data);
         localStorage.setItem('projectArticles', stringifyedData);
+        localStorage.setItem('ETag', jqXHR.getResponseHeader('ETag'));
         projectView.renderIndexPage();
+      }
+    });
+  };
+
+  Project.fetchAll = function() {
+    if (localStorage.projectArticles) {
+      $.ajax({
+        url: '/../data/myProjects.json',
+        method: 'HEAD',
+        success: function (data, textStatus, jqXHR) {
+          if (localStorage.ETag === jqXHR.getResponseHeader('ETag')) {
+            console.log('Has Not Changed');
+            var parsedData = JSON.parse(localStorage.projectArticles);
+            Project.loadAll(parsedData);
+            projectView.renderIndexPage();
+          } else {
+            console.log('Has Changed');
+            Project.ajaxGetJSON();
+          }
+        }
       });
+
+    } else {
+      Project.ajaxGetJSON();
     }
   };
 
