@@ -2,6 +2,16 @@ section {
   max-width: 300px;
   margin: auto;
   text-align: center;
+  overflow:auto;
+}
+#write {
+  max-width: 600px;
+  margin: auto;
+  overflow:auto;
+}
+#write label {
+  display: block;
+  width: 100%;
 }
 #aboutme {
   max-width: 960px;

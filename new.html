@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Amos</title>
+      <link rel="shortcut icon" href="pics/penfold_s_pet.ico" type="image/x-icon"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="vendor/normalize.css">
+      <link rel="stylesheet" href="styles/base.css">
+      <link rel="stylesheet" href="styles/layout.css">
+      <link rel="stylesheet" href="styles/modules.css">
+      <script src="https://use.fontawesome.com/7987ffcc0d.js"></script>
+      <script id="projects-template" type="text/x-handlebars-template">
+         <div>
+            <a href="{{githubUrl}}" target="_blank"><img src="{{snapShotUrl}}"/></a>
+            <h2>{{name}}</h2>
+            <div>{{timeTook}}</div>
+            <p>{{description}}</p>
+         </div>
+      </script>
+   </head>
+   <body>
+      <header>
+         <section>
+            <h1>Tag line</h1>
+            <h2>stuff</h2>
+         </section>
+         <nav class="main-nav">
+            <div class="icon-menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <ul>
+               <li class="tab" data-content="write"><i class="fa fa-pencil-square-o" aria-hidden="true"> Write</i></li>
+               <li class="tab" data-content="preview"><i class="fa fa-eye" aria-hidden="true"> Preview</i></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <section id="write" class="tab-content">
+            <h1>New Project</h1>
+            <form action="#" id="new-form">
+               <label>
+               <input type="text" id="project-name" placeholder="Project Name" required>
+               </label>
+               <textarea id="project-description" rows="8" cols="40" required></textarea>
+               <label>
+               <input type="text" id="snap-shot-url" placeholder="Snap Shot Url" required>
+               </label>
+               <label>
+               <input type="text" id="github-url" placeholder="Github Url" required>
+               </label>
+               <label>
+               <input type="text" id="time-took" placeholder="Time it Took" required>
+               </label>
+            </form>
+         </section>
+         <section class="tab-content" id="preview">
+            <section id="project-preview" class="tab-content"></section>
+            <label id="export-field" for="project-json" class="pull-right">
+            <input type="text" readonly id="project-json"><br>
+            When finalized, copy the above JSON, and paste into blogArticles.js
+            </label>
+         </section>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+      <script src="scripts/models/project.js"></script>
+      <script src="scripts/views/projectView.js"></script>
+      <script src="scripts/views/newProject.js"></script>
+   </body>
+</html>
