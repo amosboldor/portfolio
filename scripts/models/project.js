@@ -20,10 +20,6 @@
     });
   };
 
-  Project.projects.forEach(function(proj) {
-    $('#projects').append(proj.toHtml());
-  });
-
   Project.ajaxGetJSON = function () {
     $.ajax({
       url: '/../data/myProjects.json',
