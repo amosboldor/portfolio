@@ -18,6 +18,18 @@
             <p>{{description}}</p>
          </div>
       </script>
+      <script id="repo-template" type="text/x-handlebars-template">
+        <li>
+          <a href="{{html_url}}" target="_blank"><h3>{{full_name}}</h3></a>
+          <p>Description: {{description}}</p>
+          <p>Primary Language: {{language}}</p>
+          <p>Created: {{created_at}}</p>
+          <p>Last updated: {{updated_at}}</p>
+          {{#if watchers}}
+            <p>{{watchers_count}} watching this repo</p>
+          {{/if}}
+        </li>
+      </script>
    </head>
    <body>
       <header>
@@ -30,6 +42,7 @@
             <ul>
                <li class="tab" data-content="projects" ><i class="fa fa-home" aria-hidden="true"></i><a href="/"> Home</a></li>
                <li class="tab" data-content="aboutme" ><i class="fa fa-user-circle-o" aria-hidden="true"><a href="/aboutme"> About Me</a></i></li>
+               <li><i class="fa fa-folder-o" aria-hidden="true"><a href="/repos"> My Repos</a></i></li>
                <li><i class="fa fa-linkedin-square" aria-hidden="true"><a href="https://www.linkedin.com/in/amos-boldor-33a99b66" target="_blank"> Linkedin</a></i></li>
                <li><i class="fa fa-twitter-square" aria-hidden="true"><a href="https://twitter.com/AmosBoldor" target="_blank"> Twitter</a></i></li>
                <li><i class="fa fa-github-square" aria-hidden="true"><a href="https://github.com/amosboldor" target="_blank"> Github</a></i></li>
@@ -38,6 +51,7 @@
       </header>
       <main>
          <section id="projects" class="tab-content"></section>
+         <section id="github-repos" class="tab-content"></section>
          <section id="aboutme" class="tab-content">
             <h2>Lorem Ipsum</h2>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -53,11 +67,19 @@
             </address>
          </div>
       </footer>
+      <!-- Vendor files: -->
+      <script src="githubToken.js"></script>
       <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+      <!-- Model files: -->
       <script src="scripts/models/project.js"></script>
+      <script src="scripts/models/repo.js"></script>
+      <!-- View files: -->
       <script src="scripts/views/projectView.js"></script>
+      <script src="scripts/views/repoView.js"></script>
+      <!-- Controller files: -->
+      <script src="scripts/controllers/repoController.js"></script>
       <script src="scripts/controllers/aboutController.js"></script>
       <script src="scripts/controllers/projectController.js"></script>
       <script src="scripts/controllers/routes.js"></script>
