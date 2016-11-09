@@ -13,12 +13,20 @@ section {
   display: block;
   width: 100%;
 }
-#aboutme {
+#aboutme, #github-repos {
   max-width: 960px;
   margin: 0;
 }
-.template {
-  display: none;
+#=#github-repos {
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#github-repos>li {
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  margin: auto;
 }
 nav ul li {
   font-size: 1.5em;
