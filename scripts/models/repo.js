@@ -4,18 +4,14 @@
   repos.allRepos = [];
 
   repos.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/amosboldor/repos',
-      type: 'GET',
-      headers: {'Authorization': 'token ' + githubToken},
-      success: function (data) {
-        console.log(data);
-        data.forEach(function (obj) {
-          repos.allRepos.push(obj);
-        });
-        callback();
-      }
-    });
+    $.when(
+     $.get('/github/users/amosboldor/repos', function(data){
+       repos.allRepos = data;
+     }),
+     $.get('/github/users/amosboldor/followers', function(data){
+       repos.followers = data;
+     })
+    ).done(callback);
   };
 
   repos.withTheAttribute = function(myAttr) {
